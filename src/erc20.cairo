@@ -102,5 +102,4 @@ mod cairo_token {
         }
 
     }
-
 }
