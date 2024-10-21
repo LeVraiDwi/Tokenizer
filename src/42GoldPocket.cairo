@@ -1,5 +1,5 @@
 #[starknet::contract]
-mod 42GoldPocket {
+mod GoldPocket {
 
     use starknet::ContractAddress;
     use starknet::get_caller_address;

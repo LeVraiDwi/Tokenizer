@@ -1,1 +1,1 @@
-mod 42GoldPocket;
+mod GoldPocket;
