@@ -114,3 +114,52 @@ Run:
 ### Build
 Run:
 ```scarb build```
+
+### RPC
+To interact with the Starknet network, you need to set an RPC endpoint within Starkli. in our case we use Alchemy.
+
+### Declaring the smart contract
+Declaring the class of your contract, sending your contract’s code to the network.
+
+Run:
+```starkli declare target/dev/contract.json --rpc=$STARKNET_RCP --compiler-version=2.8.2```
+
+output:
+```Declaring Cairo 1 class: 0x014f310dedff23e6cb8a0e7473776d7d2e84ace3a7d3872002ff33adff0da68a
+Compiling Sierra class to CASM with compiler version 2.8.2...
+CASM class hash: 0x0085eab342912fc68924eddf62ccf68a822f82eb795d3329261388782e2f1fb8
+Contract declaration transaction: 0x07701519b1faed147c1c56f8f32da442aca24cb76e69d6f2a23baa6bc916f1ef
+Class hash declared:
+0x014f310dedff23e6cb8a0e7473776d7d2e84ace3a7d3872002ff33adff0da68a
+```
+
+### Deploying a smart contract
+Deploying a contract, i.e. creating an instance of the code you previously declared.
+
+Get the name and symbol of theo tokken:
+```
+python3 -i ./src/util.py
+>>> str_to_felt("42GoldenPocketToken")
+1164018672775343672315887991257447216970425710
+>>> str_to_felt("42GoldenPocket")
+1058668815653930935073629362939252
+```
+
+Run:
+```
+starkli deploy <YOUR_CLASS_HASH> <SMART_WALLET_ADDRESS> <NameHex> <SymboleHex> <decimal> <TotalSuplie> <salt>
+```
+
+with the precedent output:
+```
+starkli deploy --rpc=$STARKNET_RCP 0x014f310dedff23e6cb8a0e7473776d7d2e84ace3a7d3872002ff33adff0da68a 0x05216E78D8D4A1B33c08AFCF39cE666FEEDef9A189eE418FBB2c4DDBfd09B065 1164018672775343672315887991257447216970425710 1058668815653930935073629362939252 15 1000000 0
+```
+
+output:
+```
+Deploying class 0x014f310dedff23e6cb8a0e7473776d7d2e84ace3a7d3872002ff33adff0da68a with salt 0x03655ef959bc7708a8c7986e113e7be106d1c6c621b086c5a354ca54b3350793...
+The contract will be deployed at address 0x06b0b8c0cb6b228942212a074ca4eaf036379dce58eac1d17ab4b56af4bcfc9b
+Contract deployment transaction: 0x07d2d3ae8c5d6e8d46c04c2ce07484cb67a08ab80c848e8a229a511813ec56ee
+Contract deployed:
+0x06b0b8c0cb6b228942212a074ca4eaf036379dce58eac1d17ab4b56af4bcfc9b
+```
