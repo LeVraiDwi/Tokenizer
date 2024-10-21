@@ -70,3 +70,18 @@ Starknet allows:
 
 ## What to do with this token?
 The smart contract I created allows for the generation of tokens that will serve as currency in a game. The contract acts as the player's wallet, while the tokens represent the currency.
+
+# Create the Tokken:
+
+## Setup
+
+curl https://get.starkli.sh | zsh
+. /root/.starkli/env
+starkliup
+
+export STARKNET_ACCOUNT=./starkli-wallets/deployer/account.json
+export STARKNET_KEYSTORE=./starkli-wallets/deployer/keystore.json
+
+export PATH="$PATH:$HOME/.local/bin"
+curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | zsh
+

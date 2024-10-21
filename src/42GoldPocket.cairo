@@ -1,5 +1,5 @@
 #[starknet::contract]
-mod cairo_token {
+mod 42GoldPocket {
 
     use starknet::ContractAddress;
     use starknet::get_caller_address;
