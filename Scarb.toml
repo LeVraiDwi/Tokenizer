@@ -1,5 +1,5 @@
 [package]
-name = "42GoldPocket"
+name = "42goldpocket"
 version = "0.2.0"
 
 [dependencies]
