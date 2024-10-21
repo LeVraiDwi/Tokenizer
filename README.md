@@ -75,13 +75,42 @@ The smart contract I created allows for the generation of tokens that will serve
 
 ## Setup
 
-curl https://get.starkli.sh | zsh
-. /root/.starkli/env
-starkliup
+Run:
+```curl https://get.starkli.sh | zsh```
+```. /root/.starkli/env```
+```starkliup```
 
-export STARKNET_ACCOUNT=./starkli-wallets/deployer/account.json
-export STARKNET_KEYSTORE=./starkli-wallets/deployer/keystore.json
+Run:
+```export STARKNET_ACCOUNT=./starkli-wallets/deployer/account.json```
+```export STARKNET_KEYSTORE=./starkli-wallets/deployer/keystore.json```
 
-export PATH="$PATH:$HOME/.local/bin"
-curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | zsh
+Run:
+```export PATH="$PATH:$HOME/.local/bin"```
+```curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | zsh```
 
+## Account and api key
+### Add the addr to API services
+Run:
+```export STARKNET_RCP=https://starknet-sepolia.g.alchemy.com/starknet/version/rpc/v0_7/[secretToken]```
+
+### fetch account
+
+Run:
+```starkli signer keystore from-key ./starkli-wallets/deployer/keystore.json```
+
+Run:
+
+```starkli account fetch [accountAddr] --output ./starkli-wallets/deployer/account.json --rpc $STARKNET_RCP```
+
+2 file should be create in ./starkli-wallets/deployer/
+account.json and keystore.json
+
+### deploy account
+
+Run:
+```starkli account deploy ./starkli-wallets/deployer/account.json```
+
+## Create and deploy Smart contract
+### Build
+Run:
+```scarb build```
