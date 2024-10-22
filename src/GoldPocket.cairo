@@ -23,7 +23,6 @@ mod GoldPocket {
         self.symbol.write(_symbol);
         self.decimal.write(_decimal);
         self.owner.write(_owner);
-
     }
 
     //External function can be call by other contract or entities

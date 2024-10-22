@@ -1,1 +1,0 @@
-{"version":1,"contracts":[{"id":"k8qu0q2m79in0","package_name":"tokenizer","contract_name":"cairo_token","module_path":"tokenizer::erc20::cairo_token","artifacts":{"sierra":"tokenizer_cairo_token.contract_class.json","casm":null}}]}
