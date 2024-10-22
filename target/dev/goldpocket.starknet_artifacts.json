@@ -1,0 +1,1 @@
+{"version":1,"contracts":[{"id":"58dko68e2mkl4","package_name":"goldpocket","contract_name":"GoldPocket","module_path":"goldpocket::GoldPocket::GoldPocket","artifacts":{"sierra":"goldpocket_GoldPocket.contract_class.json","casm":null}}]}
