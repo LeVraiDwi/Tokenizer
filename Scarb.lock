@@ -2,5 +2,5 @@
 version = 1
 
 [[package]]
-name = "tokenizer"
+name = "goldpocket"
 version = "0.2.0"
