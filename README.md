@@ -127,7 +127,9 @@ starkli account deploy ./starkli-wallets/deployer/account.json
 ## Create and deploy Smart contract
 ### Build
 Run:
-```scarb build```
+```
+scarb build
+```
 
 ### RPC
 To interact with the Starknet network, you need to set an RPC endpoint within Starkli. in our case we use Alchemy.
@@ -136,7 +138,9 @@ To interact with the Starknet network, you need to set an RPC endpoint within St
 Declaring the class of your contract, sending your contract’s code to the network.
 
 Run:
-```starkli declare target/dev/contract.json --rpc=$STARKNET_RCP --compiler-version=2.8.2```
+```
+starkli declare target/dev/contract.json --rpc=$STARKNET_RCP --compiler-version=2.8.2
+```
 
 output:
 ```Declaring Cairo 1 class: 0x014f310dedff23e6cb8a0e7473776d7d2e84ace3a7d3872002ff33adff0da68a
