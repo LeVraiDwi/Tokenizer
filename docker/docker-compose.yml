@@ -1,0 +1,13 @@
+services:
+  token:
+    image: token:inc
+    build: ./token
+    volumes:
+      - ./token/share:/home
+    ports:
+      - 8888:8888
+    container_name: token_vm
+    command: /bin/bash
+
+volumes:
+  token:
