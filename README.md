@@ -111,7 +111,7 @@ starkli signer keystore from-key ./starkli-wallets/deployer/keystore.json
 Run:
 
 ```
-starkli account fetch [accountAddr] --output ./starkli-wallets/deployer/account.json --rpc $STARKNET_RCP
+starkli account fetch [accountAddr] --output ./starkli-wallets/deployer/account.json --rpc=$STARKNET_RCP
 ```
 
 2 file should be create in ./starkli-wallets/deployer/
