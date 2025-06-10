@@ -1,13 +1,12 @@
 services:
   token:
-    image: token:inc
-    build: ./token
+    image: solana:inc
+    build: ./solana
     volumes:
-      - ./token/share:/home
+      - ./solana/share:/home
     ports:
-      - 8888:8888
-    container_name: token_vm
-    command: /bin/bash
+      - 8899:8899
+    container_name: solana
 
 volumes:
   token:
