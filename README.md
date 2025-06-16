@@ -21,3 +21,7 @@ The Solana ecosystem is expanding rapidly, with integrations across DeFi, NFTs, 
 ## 🔐 Security and Innovation
 
 Solana uses a unique Proof of History (PoH) consensus mechanism combined with Proof of Stake (PoS), offering strong security while maintaining high throughput. This makes it a forward-thinking choice for developers focused on innovation.
+
+## Smart Contract
+    Adress: 2eFhhTNjBNrgXw2iVgowMnD3bsewRnUDE8hsqZ8FJ1Gm
+    Solana Explorer: https://explorer.solana.com/address/3jD2w4guShaSCoMX2Q7rUVm7cNtBy6JwXruhdv7uZSWK?cluster=devnet
