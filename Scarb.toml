@@ -1,9 +1,0 @@
-[package]
-name = "goldpocket"
-version = "0.2.0"
-
-[dependencies]
-starknet = ">=2.4.0"
-
-[[target.starknet-contract]]
-sierra = true
